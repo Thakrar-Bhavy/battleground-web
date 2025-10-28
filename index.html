@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BattleGround Web</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://unpkg.com/peerjs@1.5.2/dist/peerjs.min.js"></script>
+</head>
+<body>
+  <!-- Game Title -->
+  <header>
+    <h1>🔥 BattleGround Web 🔫</h1>
+  </header>
+
+  <!-- Lobby Screen -->
+  <section id="lobby">
+    <h2>Enter Player Name</h2>
+    <input type="text" id="playerName" placeholder="Your Name" />
+
+    <div class="lobby-buttons">
+      <button id="createRoomBtn">Create Room</button>
+      <button id="joinRoomBtn">Join Room</button>
+    </div>
+
+    <div id="joinRoomInput" style="display:none;">
+      <input type="text" id="roomIdInput" placeholder="Enter Room ID" />
+      <button id="joinNowBtn">Join</button>
+    </div>
+
+    <p id="roomInfo"></p>
+  </section>
+
+  <!-- Game Canvas -->
+  <canvas id="gameCanvas"></canvas>
+
+  <!-- Mobile Controls -->
+  <div id="mobileControls">
+    <div id="joystickContainer">
+      <div id="joystick"></div>
+    </div>
+    <button id="shootBtn">🔫</button>
+  </div>
+
+  <!-- Footer Info -->
+  <footer>
+    <p>© 2025 BattleGround Web | Built with HTML + CSS + JS + PeerJS</p>
+  </footer>
+
+  <!-- Game Scripts -->
+  <script src="ui.js"></script>
+  <script src="network.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
